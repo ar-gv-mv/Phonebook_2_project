@@ -74,7 +74,7 @@ app.get('/info', (request, response) => {
     response.send(`Phonebook has info for ${personsTotal} <br/> ${time}`)
   })
 
-app.post('/api/persons', (request, response) => {
+app.post('/persons', (request, response) => {
     const {name, number} = request.body
 
     if (!name) {
