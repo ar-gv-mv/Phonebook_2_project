@@ -2,7 +2,7 @@ import express from 'express'
 import morgan from 'morgan'
 import cors from 'cors'
 const app = express()
-const PORT = 3001
+const PORT = process.env.PORT || 3001
 app.use(morgan('tiny'))
 morgan.token('body', function getBody (req) {
     if (req.method === 'POST') {
